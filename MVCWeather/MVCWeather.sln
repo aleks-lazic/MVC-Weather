@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWeather", "MVCWeather\MVCWeather.csproj", "{184B3680-6DB1-4AB7-AC00-716BCA6510C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{BA9546D8-22DD-497A-A266-548ADAEE27C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{AFC90449-3CFE-49F4-BCA9-AF338BDBAF59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{184B3680-6DB1-4AB7-AC00-716BCA6510C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184B3680-6DB1-4AB7-AC00-716BCA6510C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184B3680-6DB1-4AB7-AC00-716BCA6510C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184B3680-6DB1-4AB7-AC00-716BCA6510C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9546D8-22DD-497A-A266-548ADAEE27C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9546D8-22DD-497A-A266-548ADAEE27C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9546D8-22DD-497A-A266-548ADAEE27C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9546D8-22DD-497A-A266-548ADAEE27C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC90449-3CFE-49F4-BCA9-AF338BDBAF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC90449-3CFE-49F4-BCA9-AF338BDBAF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC90449-3CFE-49F4-BCA9-AF338BDBAF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC90449-3CFE-49F4-BCA9-AF338BDBAF59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<DTO.Weather>
+
+@{
+
+    if (Model.Count() == 0)
+    {
+        ViewBag.Title = "No weather for that city";
+    }
+    else
+    {
+        ViewBag.Title = @Model.ElementAt(0).city.name;
+    }
+
+}
+
+
+@{
+
+    if (Model.Count() == 0)
+    {
+        <h2>No weather for that city.</h2>
+
+        ViewBag.Title = "No weather for that city";
+    }
+    else
+    {
+        <h2>@Model.ElementAt(0).city.name</h2>
+    }
+
+}
+
+<p>
+    @Html.ActionLink("New Weather", "NewWeather", "Weather")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item ">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <img class="img-responsive" src="~/Media/meteo.svg" />
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="col-lg-12">
+                            <h4>Morning degree : @item.degreeMorning°</h4>
+                            <h4>Afternoon degree : @item.degreeAfternoon°</h4>
+                            <h4>Precipitation : @item.precipitation%</h4>
+                            <h4>Humidity : @item.humidity%</h4>
+                            <h4>Wind : @item.wind km/h</h4>
+                            <h4>Date : @item.date.ToString("dd.MM.yyyy")</h4>
+                            <h4>City : @item.city.name</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <img src="~/Media/delete.png" />
+                            @Html.ActionLink("Delete", "DeleteWeather", "Weather", new { id = item.id }, null)
+                        </div>
+                        <div>
+                            <img src="~/Media/edit.png" />
+                            @Html.ActionLink("Edit", "EditWeather", "Weather", new { id = item.id }, null)
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+}

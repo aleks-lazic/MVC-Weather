@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DTO.Weather>
+
+@{
+    ViewBag.Title = "AllWeathers";
+}
+
+<h2>AllWeathers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item ">
+                <div class="row">
+                    <div class="col-lg-1">
+                        <img class="img-responsive" src="~/Media/meteo.svg" />
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="col-lg-12">
+                            <h4>Morning degree : @item.degreeMorning°</h4>
+                            <h4>Afternoon degree : @item.degreeAfternoon°</h4>
+                            <h4>Precipitation : @item.precipitation%</h4>
+                            <h4>Humidity : @item.humidity%</h4>
+                            <h4>Wind : @item.wind km/h</h4>
+                            <h4>Date : @item.date.ToString("dd.MM.yyyy")</h4>
+                            <h4>City : @item.city.name</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <img src="../media/delete.png" />
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+}
