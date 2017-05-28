@@ -35,7 +35,7 @@ namespace BLL
 
         public City getCityByName(string cityName)
         {
-            string uri = "http://localhost:56463/api/city/"+cityName;
+            string uri = "http://localhost:56463/api/city/" + cityName;
 
             using (HttpClient client = new HttpClient())
             {
@@ -61,7 +61,7 @@ namespace BLL
 
         public bool DeleteWeather(int id)
         {
-            string uri = "http://localhost:56463/api/weather/"+id;
+            string uri = "http://localhost:56463/api/weather/" + id;
             using (HttpClient httpClient = new HttpClient())
             {
                 Task<HttpResponseMessage> response = httpClient.DeleteAsync(uri);

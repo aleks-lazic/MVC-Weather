@@ -148,7 +148,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Media\delete.png" />
     <Content Include="Media\edit.png" />
-    <Content Include="Media\meteo.svg" />
+    <Content Include="Media\nuageux.png" />
+    <Content Include="Media\pluie.png" />
+    <Content Include="Media\soleil.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

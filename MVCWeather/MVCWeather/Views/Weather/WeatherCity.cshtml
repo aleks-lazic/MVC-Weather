@@ -40,7 +40,20 @@
             <li class="list-group-item ">
                 <div class="row">
                     <div class="col-lg-1">
-                        <img class="img-responsive" src="~/Media/meteo.svg" />
+
+                        @if (item.degreeAfternoon >= 20)
+                        {
+                            <img class="img-responsive" src="~/Media/soleil.png" />
+                        }
+                        else if (item.precipitation > 50)
+                        {
+                            <img class="img-responsive" src="~/Media/pluie.png" />
+                        }
+                        else
+                        {
+                            <img class="img-responsive" src="~/Media/nuageux.png" />
+                        }
+
                     </div>
                     <div class="col-lg-7">
                         <div class="col-lg-12">
