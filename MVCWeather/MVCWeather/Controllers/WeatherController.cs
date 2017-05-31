@@ -38,7 +38,6 @@ namespace MVCWeather.Controllers
             return RedirectToAction("WeatherCity", new { cityName = search });
         }
 
-
         public ActionResult NewWeather()
         {
             return View();
