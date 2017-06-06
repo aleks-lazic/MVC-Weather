@@ -68,12 +68,24 @@
                     </div>
                     <div class="col-lg-4">
                         <div>
-                            <img src="~/Media/delete.png" />
-                            @Html.ActionLink("Delete", "DeleteWeather", "Weather", new { id = item.id }, null)
+                            @if (item.date.Date.Equals(DateTime.Now.Date))
+                            {
+                            }
+                            else
+                            {
+                                <img src="~/Media/delete.png" />
+                                @Html.ActionLink("Delete", "DeleteWeather", "Weather", new { id = item.id }, null)
+                            }
                         </div>
                         <div>
-                            <img src="~/Media/edit.png" />
-                            @Html.ActionLink("Edit", "EditWeather", "Weather", new { id = item.id }, null)
+                            @if (item.date.Date.Equals(DateTime.Now.Date))
+                            {
+                            }
+                            else
+                            {
+                                <img src="~/Media/edit.png" />
+                                @Html.ActionLink("Edit", "EditWeather", "Weather", new { id = item.id }, null)
+                            }
                         </div>
                     </div>
                 </div>

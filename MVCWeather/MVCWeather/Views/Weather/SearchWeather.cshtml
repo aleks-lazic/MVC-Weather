@@ -10,6 +10,8 @@
 {
     @Html.TextBox("search", null, new { @class = "form-control" })
     <input type="submit" value="Search" />
+    @Html.ValidationSummary(true)
+    @Html.ValidationMessage("key", new { @class = "text-danger" })
 }
 
 

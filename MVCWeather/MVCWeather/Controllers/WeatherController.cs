@@ -23,7 +23,8 @@ namespace MVCWeather.Controllers
 
             if (search.Equals(""))
             {
-                return RedirectToAction("SearchWeather");
+                ModelState.AddModelError("key", "Please enter a city");
+                return View();
             }
             AccessWebAPI access = new AccessWebAPI();
 
@@ -32,7 +33,8 @@ namespace MVCWeather.Controllers
 
             if (weathers.Count == 0)
             {
-                return RedirectToAction("SearchWeather");
+                ModelState.AddModelError("key", "This city cannot be found, please try another one");
+                return View();
             }
             GlobalController.searchCity = weathers.ElementAt(0).city.name;
             return RedirectToAction("WeatherCity", new { cityName = search });
@@ -48,8 +50,8 @@ namespace MVCWeather.Controllers
 
             if (date <= DateTime.Now)
             {
-                ModelState.AddModelError("date", "Date must be after today");
-                return RedirectToAction("NewWeather");
+                ModelState.AddModelError(string.Empty, "The Date must be after today");
+                return View();
             }
             AccessWebAPI access = new AccessWebAPI();
             Weather w = new Weather { degreeMorning = degreeMorning, degreeAfternoon = degreeAfternoon, precipitation = precipitation, humidity = humidity, wind = wind, date = date };

@@ -4,14 +4,14 @@
     ViewBag.Title = "EditWeather";
 }
 
-<h2>EditWeather</h2>
+<h2>Edit Weather</h2>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Weather</h4>
+        <h4>@Model.date.Date.ToString("dd MMM yyyy")</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.id)
