@@ -33,6 +33,17 @@ namespace BLL
             }
         }
 
+        public List<City> GetAllCities()
+        {
+            string uri = "http://localhost:56463/api/city";
+
+            using (HttpClient client = new HttpClient())
+            {
+                Task<string> response = client.GetStringAsync(uri);
+                return JsonConvert.DeserializeObject<List<City>>(response.Result);
+            }
+        }
+
         public City getCityByName(string cityName)
         {
             string uri = "http://localhost:56463/api/city/" + cityName;
